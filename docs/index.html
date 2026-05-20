@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoReview</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div>
+        <span class="brand">AlgoReview</span>
+        <p class="subtitle">Practice data structures and algorithms with flashcards, topic review, and quizzes.</p>
+      </div>
+      <nav class="top-nav">
+        <a href="#review">Topics</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Review data structures & algorithms</h1>
+        <p>Study key concepts, test your knowledge, and reinforce your problem-solving skills with a lightweight browser app.</p>
+        <div class="hero-actions">
+          <a href="#review" class="button primary">Start reviewing</a>
+          <a href="#quiz" class="button">Take a quiz</a>
+        </div>
+      </section>
+
+      <section id="review" class="panel">
+        <div class="section-heading">
+          <h2>Core review topics</h2>
+          <p>Explore the most important data structures and algorithm topics for interviews and coursework.</p>
+        </div>
+        <div id="topic-cards" class="grid"></div>
+      </section>
+
+      <section id="flashcards" class="panel">
+        <div class="section-heading">
+          <h2>Flashcard practice</h2>
+          <p>Cycle through quick review cards to reinforce definitions, trade-offs, and algorithm behavior.</p>
+        </div>
+        <div class="flashcard-shell">
+          <div class="flashcard" id="flashcard">
+            <div class="flash-question" id="flash-question"></div>
+            <button class="button secondary" id="reveal">Reveal answer</button>
+            <div class="flash-answer hidden" id="flash-answer"></div>
+          </div>
+          <div class="flash-controls">
+            <button class="button tertiary" id="prev-card">Previous</button>
+            <span id="flash-counter"></span>
+            <button class="button tertiary" id="next-card">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="panel">
+        <div class="section-heading">
+          <h2>Quiz challenge</h2>
+          <p>Answer a quick multiple-choice quiz to test algorithm intuition and complexity understanding.</p>
+        </div>
+        <div class="quiz-shell">
+          <div class="quiz-card" id="quiz-card">
+            <div class="quiz-question" id="quiz-question"></div>
+            <div id="quiz-options" class="quiz-options"></div>
+            <div class="quiz-feedback" id="quiz-feedback"></div>
+          </div>
+          <div class="quiz-controls">
+            <button class="button tertiary" id="quiz-next">Next</button>
+            <button class="button secondary" id="quiz-restart">Restart</button>
+            <span id="quiz-score"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built to help students and interview candidates review algorithm fundamentals.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
